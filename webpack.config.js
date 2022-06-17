@@ -18,6 +18,10 @@ module.exports = {
       template: join(__dirname, "public/index.html"),
     }),
   ],
+  devServer: {
+    port: 3000, // 端口号
+    open: true,
+  },
   module: {
     rules: [
       {
