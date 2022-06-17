@@ -12,6 +12,9 @@ import "./assets/fonts/iconfont.css";
 import gifSrc from "../src/assets/1.gif";
 import pngSrc from "../src/assets/logo_small.png";
 
+//vue
+import "../src/app.vue";
+
 const gif = document.createElement("img");
 const png = document.createElement("img");
 
