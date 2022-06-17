@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("tabs"),console.log("实现轮播图的业务逻辑")})();
