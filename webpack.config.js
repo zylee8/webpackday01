@@ -32,6 +32,34 @@ module.exports = {
         test: /\.less$/,
         use: ["style-loader", "css-loader", "less-loader"],
       },
+      {
+        test: /\.(png|jpg|gif|jpeg)$/i,
+        type: "asset",
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        type: "asset",
+        generator: {
+          filename: "images/[hash:6][ext]",
+        },
+        parser: {
+          dataUrlCondition: {
+            maxSize: 2 * 1024,
+          },
+        },
+      },
+      {
+        test: /\.(woff|woff2|ttf|eot|svg)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[hash:6][ext]",
+        },
+      },
+
+      {
+        test: /\.js$/i,
+        use: ["babel-loader"],
+      },
     ],
   },
 };
